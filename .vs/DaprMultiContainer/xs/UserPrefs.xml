@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="dev-test">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyFrontEnd/Pages/Index.cshtml.cs">
+    <Files>
+      <File FileName="MyFrontEnd/Dockerfile" />
+      <File FileName="docker-compose.yml" />
+      <File FileName="MyFrontEnd/Pages/Index.cshtml.cs" Line="33" Column="1" />
+      <File FileName="MyBackEnd/Dockerfile" />
+      <File FileName="MyBackEnd/Properties/launchSettings.json" />
+      <File FileName="MyFrontEnd/Program.cs" />
+      <File FileName="MyFrontEnd/Pages/Index.cshtml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DaprMultiContainer" expanded="True">
+            <Node name="docker-compose" expanded="True" />
+            <Node name="MyBackEnd" expanded="True" selected="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="MyFrontEnd" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Index.cshtml" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="dev-test" Name="dev-test">
+      <Items>
+        <StartupItem ItemId="{18EEA3B8-3C20-4644-BAFF-B7AC0D8B9EFC}" ItemName="docker-compose" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.ItemProperties.MyBackEnd PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MyFrontEnd PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+</Properties>

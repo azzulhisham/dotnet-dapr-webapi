@@ -1,0 +1,97 @@
+name: dockercompose1654605836805453366
+services:
+  mybackend:
+    build:
+      context: /Users/zultan/sources/dotnet/DaprMultiContainer
+      dockerfile: MyBackEnd/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: mybackend
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    - mode: ingress
+      target: 50001
+      published: "52000"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: /Users/zultan/.aspnet/https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: /Users/zultan/.microsoft/usersecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  mybackend-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - MyBackEnd
+    - -app-port
+    - "80"
+    depends_on:
+      mybackend:
+        condition: service_started
+    image: daprio/daprd:latest
+    network_mode: service:mybackend
+  myfrontend:
+    build:
+      context: /Users/zultan/sources/dotnet/DaprMultiContainer
+      dockerfile: MyFrontEnd/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: myfrontend
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    - mode: ingress
+      target: 50001
+      published: "51000"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: /Users/zultan/.aspnet/https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: /Users/zultan/.microsoft/usersecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  myfrontend-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - MyFrontEnd
+    - -app-port
+    - "80"
+    depends_on:
+      myfrontend:
+        condition: service_started
+    image: daprio/daprd:latest
+    network_mode: service:myfrontend
+networks:
+  default:
+    name: dockercompose1654605836805453366_default

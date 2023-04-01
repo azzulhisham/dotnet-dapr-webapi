@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFrontEnd", "MyFrontEnd\MyFrontEnd.csproj", "{0EC299DB-4E30-4F4D-B807-821E68DA422D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{18EEA3B8-3C20-4644-BAFF-B7AC0D8B9EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBackEnd", "MyBackEnd\MyBackEnd.csproj", "{F27AD5E8-0CBE-4D30-B0A6-5008714B3E17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EC299DB-4E30-4F4D-B807-821E68DA422D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC299DB-4E30-4F4D-B807-821E68DA422D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC299DB-4E30-4F4D-B807-821E68DA422D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC299DB-4E30-4F4D-B807-821E68DA422D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18EEA3B8-3C20-4644-BAFF-B7AC0D8B9EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18EEA3B8-3C20-4644-BAFF-B7AC0D8B9EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18EEA3B8-3C20-4644-BAFF-B7AC0D8B9EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18EEA3B8-3C20-4644-BAFF-B7AC0D8B9EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27AD5E8-0CBE-4D30-B0A6-5008714B3E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27AD5E8-0CBE-4D30-B0A6-5008714B3E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27AD5E8-0CBE-4D30-B0A6-5008714B3E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27AD5E8-0CBE-4D30-B0A6-5008714B3E17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CFEA622-4342-4B20-8748-8F448F7E0EF4}
+	EndGlobalSection
+EndGlobal
